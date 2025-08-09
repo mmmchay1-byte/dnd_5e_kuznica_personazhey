@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+import 'package:dnd_5e_kuznica_personazhey/models/character_class.dart';
 import '../providers/data_provider.dart';
 import '../providers/character_provider.dart';
 import '../services/localization.dart';
