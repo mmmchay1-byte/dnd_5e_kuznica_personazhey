@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../utils/text_theme_compat.dart';
 
 import '../../models/race.dart';
 import '../../models/character_class.dart';
