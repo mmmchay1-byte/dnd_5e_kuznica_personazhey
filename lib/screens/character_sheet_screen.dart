@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../utils/text_theme_compat.dart';
+
 import 'package:provider/provider.dart';
 
 import '../providers/character_provider.dart';
