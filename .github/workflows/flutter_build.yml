@@ -19,11 +19,10 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Install Flutter
+      - name: Install Flutter (3.22.2 stable)
         uses: subosito/flutter-action@v2
         with:
-          # можно указать конкретную версию, напр. '3.22.2'
-          flutter-version: 'stable'
+          flutter-version: '3.22.2'
           channel: 'stable'
 
       - name: Cache pub
@@ -33,6 +32,16 @@ jobs:
           key: ${{ runner.os }}-pub-${{ hashFiles('**/pubspec.lock') }}
           restore-keys: |
             ${{ runner.os }}-pub-
+
+      - name: Cache Gradle
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
 
       - name: Flutter pub get
         run: flutter pub get
@@ -49,7 +58,6 @@ jobs:
           name: app-release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
           if-no-files-found: error
-          compression-level: 6
           retention-days: 7
 
       - name: Upload AAB
@@ -58,5 +66,4 @@ jobs:
           name: app-release-aab
           path: build/app/outputs/bundle/release/app-release.aab
           if-no-files-found: error
-          compression-level: 6
           retention-days: 7
