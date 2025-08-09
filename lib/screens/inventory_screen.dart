@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../utils/text_theme_compat.dart';
 
 import '../models/equipment.dart';
 import '../models/magic_item.dart';
