@@ -1,0 +1,38 @@
+name: dnd_5e_kuznica_personazhey
+description: |
+  Полностью локализованное мобильное приложение для создания и управления персонажами D&D 5‑й редакции.
+  Приложение использует Flutter, SQflite, Provider и Intl для поддержки локализации и работы оффлайн.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  provider: ^6.0.5
+  sqflite: ^2.3.0
+  path_provider: ^2.1.2
+  intl: ^0.18.1
+  path: ^1.8.3
+  flutter_localizations:
+    sdk: flutter
+  font_awesome_flutter: ^10.6.0
+  lottie: ^2.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/spells.json
+    - assets/data/equipment.json
+    - assets/data/magic_items.json
+    - assets/data/feats.json
+    - assets/data/races.json
+    - assets/animations/
