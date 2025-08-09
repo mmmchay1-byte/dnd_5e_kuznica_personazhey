@@ -43,6 +43,10 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
+      # ВАЖНО: регенерим платформенные папки под современный Gradle
+      - name: Regenerate Android project (fix unsupported Gradle)
+        run: flutter create . --platforms=android
+
       - name: Flutter pub get
         run: flutter pub get
 
