@@ -52,11 +52,11 @@ class DnDApp extends StatelessWidget {
                 supportedLocales: const [Locale('ru')],
                 locale: const Locale('ru'),
                 localizationsDelegates: const [
-                  AppLocalizationsDelegate(),
-                  DefaultWidgetsLocalizations.delegate,
-                  DefaultMaterialLocalizations.delegate,
-                  DefaultCupertinoLocalizations.delegate,
-                ],
+  AppLocalizationsDelegate(),
+  GlobalMaterialLocalizations.delegate,
+  GlobalWidgetsLocalizations.delegate,
+  GlobalCupertinoLocalizations.delegate,
+],
                 home: const HomeScreen(),
               );
             },
