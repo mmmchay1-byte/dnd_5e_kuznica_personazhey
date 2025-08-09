@@ -1,7 +1,7 @@
 // lib/utils/text_theme_compat.dart
 import 'package:flutter/material.dart';
 
-// M2 -> M3 совместимость
+// Совместимость M2 -> M3 (старые геттеры поверх новых полей)
 extension TextThemeCompat on TextTheme {
   TextStyle? get subtitle1  => titleMedium;
   TextStyle? get subtitle2  => titleSmall;
